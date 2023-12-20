@@ -35,13 +35,14 @@ schema = th.PropertiesList(
     th.Property(
         "custom_fields",
         th.ObjectType(
-            th.Property("employment_type", th.StringType),
-            th.Property("favorite_station", th.StringType),
+            th.Property("employment_type", th.StringType, required=False),
+            th.Property("favorite_station", th.StringType, required=False),
             th.Property("best_seasons", th.StringType, required=False),
-            th.Property("start_date", th.StringType),
+            th.Property("start_date", th.StringType, required=False),
             th.Property("willing_to_negotiate", th.StringType, required=False),
-            th.Property("salary", th.IntegerType),
-            th.Property("notes", th.StringType),
+            th.Property("salary", th.IntegerType, required=False),
+            th.Property("notes", th.StringType, required=False),
+            th.Property("location", th.StringType, required=False),
         ),
     ),
     th.Property(
