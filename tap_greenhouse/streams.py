@@ -100,7 +100,8 @@ class ListUsersStream(GreenhouseStream):
 
     name = "list_users"
     path = "users"
-    replication_key = "updated_after"
+    primary_keys = ["id"]
+    replication_key = "updated_at"
     schema = schemas.users
 
     def get_child_context(self, record: dict, context: dict | None) -> dict | None:
@@ -159,6 +160,7 @@ class ListEEOCStream(GreenhouseStream):
 
     name = "list_eeoc"
     path = "eeoc"
+    primary_keys = ["application_id"]
     schema = schemas.eeoc
 
 
