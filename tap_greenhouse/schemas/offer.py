@@ -43,6 +43,13 @@ schema = th.PropertiesList(
             th.Property("salary", th.IntegerType, required=False),
             th.Property("notes", th.StringType, required=False),
             th.Property("location", th.StringType, required=False),
+            th.Property("compensation", th.StringType, required=False),
+            th.Property("equity", th.StringType, required=False),
+            th.Property("sign_on_bonus_incentive", th.StringType, required=False),
+            th.Property("relocation_bonus", th.StringType, required=False),
+            th.Property("leveling_at_offer", th.StringType, required=False),
+            th.Property("years_of_exp_at_offer", th.StringType, required=False)
+
         ),
     ),
     th.Property(
